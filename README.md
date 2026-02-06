@@ -1,18 +1,42 @@
-# 🚀 Vanilla SPA Router & Project Manager
+# 🎬 Vanilla Cinema & Task Manager SPA
 
-Una **Single Page Application (SPA)** robusta construida exclusivamente con **JavaScript Vanilla**, sin librerías ni frameworks externos. Este proyecto es una demostración técnica del dominio de la manipulación del DOM, la gestión de rutas mediante el History API y la persistencia de datos en el navegador.
+Este repositorio contiene una Single Page Application (SPA) evolucionada que demuestra el dominio de JavaScript Vanila en dos vertientes: la persistencia de datos local y el consumo de APIs multimedia de alto volumen.
 
+
+![Previwe de la App](./assets/paginaPrincipal.png);
+
+
+## 📂 Estructura del Proyecto
+
+El proyecto se divide en dos módulos lógicos principales:
+
+* **mainMovies.js:** Motor de búsqueda y catálogo de películas conectado a la API de TMDB.
+
+* **mainProjects.js:** Gestor de tareas con persistencia en localStorage (nuestro primer proyecto).
 
 
 ---
 
-## 🌟 Características Principales
+## 📽️ Características del Módulo Cinema (TMDB)
 
-* **Custom Router:** Sistema de navegación dinámica utilizando el `History API` y eventos `popstate` para una experiencia fluida sin recargas de página.
-* **CRUD Persistente:** Creación y eliminación de proyectos con persistencia total mediante `localStorage`, asegurando que los datos sobrevivan al refrescar el navegador.
-* **Reactividad Manual:** Implementación de un flujo de actualización selectiva de la interfaz de usuario (re-renderizado del DOM) tras cambios en el estado de los datos.
-* **Modo Oscuro:** Sistema de temas (Light/Dark mode) con persistencia de preferencia de usuario integrada.
-* **Consumo de API:** Integración asíncrona con *JSONPlaceholder* mediante `fetch` y `async/await` para la carga inicial de datos.
-* **Arquitectura Modular:** Separación clara de responsabilidades en funciones independientes (Formulario, Lista y Lógica de Datos).
+Este módulo representa el salto hacia el desarrollo de aplicaciones del mundo real:
+
+* **Consumo de API Real**: Integración con **The Movie Database (TMDB)** mediante `fetch` y **Bearer Tokens**.
+* **Buscador Dinámico**: Filtrado de películas con manejo de **Estados Vacíos** (mensajes de "no se encontraron resultados").
+* **Paginación Inteligente**: Botón de "Cargar más" que se sincroniza con los metadatos de la API (`total_pages`).
+* **Programación Defensiva**: Control de imágenes nulas y gestión de errores de red con `try/catch`.
+
+![Buscador Dinamico](./assets/busqueda.png);
 
 ---
+
+## 📝 Características del Módulo Project Manager
+
+Mantiene la lógica de nuestro gestor de proyectos original:
+
+* **Persistencia de Datos**: Uso avanzado de JSON.parse y JSON.stringify con localStorage.
+* **Reactividad Manual**: Actualización del DOM sin recargas de página mediante funciones de re-renderizado parcial.
+
+
+---
+

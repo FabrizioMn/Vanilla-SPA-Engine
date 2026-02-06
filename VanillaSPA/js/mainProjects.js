@@ -22,7 +22,7 @@ const root = document.getElementById("root");
 const enlaces = document.querySelectorAll(".nav-link");
 const contenido = {
   home: "<h1>Pagina de Inicio</h1>",
-  proyectos: renderizarProyectos,
+  proyectos: renderizarPeliculas,
 };
 
 //---------------------------------------------------------------------
@@ -43,9 +43,9 @@ boton.addEventListener("click", () => {
 
 //---------------------------------------------------------------------
 
+
 const navegar = async (ruta) => {
   const rutaLimpia = ruta.replace("#", "") || "home";
-
   if (typeof contenido[rutaLimpia] === "function") {
     await contenido[rutaLimpia]();
   } else {
@@ -150,3 +150,6 @@ async function renderizarProyectos() {
     root.appendChild(crearItems(datosActuales));
   }
 }
+
+
+//-------------------------------------------------------------

@@ -22,7 +22,7 @@ const root = document.getElementById("root");
 const enlaces = document.querySelectorAll(".nav-link");
 const contenido = {
   home: "<h1>Pagina de Inicio</h1>",
-  proyectos: renderizarPeliculas,
+  proyectos: renderizarProyectos,
 };
 
 //---------------------------------------------------------------------
